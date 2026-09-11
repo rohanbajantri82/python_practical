@@ -1,12 +1,18 @@
-# Accept the number of rows from the user
-rows = int(input("Enter the number of rows: "))
+total_expense = 0
+expense_count = 0
 
-print("\n--- Right-Angled Triangle Pattern ---")
+print("Enter daily expenses.")
+print("Enter 0 to stop.")
 
+while True:
+    expense = float(input("Enter expense amount: "))
 
-for i in range(1, rows + 1):
-    
-    for j in range(1, i + 1):
-        print(i, end=" ")
-   
-    print()
+    if expense == 0:
+        break
+
+    total_expense += expense
+    expense_count += 1
+
+print("\n----- Monthly Expense Summary -----")
+print("Total Monthly Expenditure: ₹", total_expense)
+print("Number of Expenses Recorded:", expense_count)
